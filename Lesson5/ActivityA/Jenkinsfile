@@ -6,6 +6,9 @@ node {
     }
 
     dir('Lesson5/ActivityA') {
+        stage("Install Basic Requirements"){
+          sh 'apk add make python'
+        }
         stage("Install Requirements") {
             sh 'make install'
         }
